@@ -1,0 +1,2 @@
+# Purpose
+The purpose of this repo is to learn with Miguel Grinberg's [Mega-Flask-Tutorial](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world) and hopefully create a personal quick reference/quick-guide to Flask
