@@ -11,3 +11,14 @@
 
 # Templates
 * Uses Jinjja
+
+# Database 
+* Use flask-sqlalchemy & flask-migrate
+* `flask db init` creates a migration repository
+    * Each changes to the database a migration script is added to the repo
+
+* The `flask db migrate` command does not make any changes to the database, it just generates the migration script. To apply the changes to the database, the `flask db upgrade` command must be used.
+* With this method, it is easier to make changes to both development and production environment. 
+    * Generate & upload the migration scripts via `flask db migrate` then on production, apply the changes using `flask db upgrade`
+* undo last migration via `flask db downgrade`
+* For a one-to-many relationship, a db.relationship field is normally defined on the "one" side, and is used as a convenient way to get access to the "many"
