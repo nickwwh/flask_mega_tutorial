@@ -1,3 +1,5 @@
+# Ignore vscode stuff
+.vscode/
 # Ignore app.db
 app.db
 # Byte-compiled / optimized / DLL files
