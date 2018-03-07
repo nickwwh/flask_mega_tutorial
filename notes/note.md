@@ -22,3 +22,21 @@
     * Generate & upload the migration scripts via `flask db migrate` then on production, apply the changes using `flask db upgrade`
 * undo last migration via `flask db downgrade`
 * For a one-to-many relationship, a db.relationship field is normally defined on the "one" side, and is used as a convenient way to get access to the "many"
+
+# Login
+* Installl flask-login
+* Add login manager to __init__.py `login = LoginManager(app)`
+* gives 4 functions
+    * `is_authenticated`: if user has valid credentials
+    * `is_active`: true if user account is active
+    * `is_anonymous`: false for regular users, True for special anonymous user
+    * `get_id()`: returns unique identifier for user
+* user class must inherit `Usermixin` class 
+* Keeps track of logged in users by storing userid in user session.
+    * does not interact with db so in models need to add user_loader function
+
+
+# Password
+* Hash yo passwords
+* werkzeug.security import generate_password_hash, check_password_hash
+*
